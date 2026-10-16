@@ -1,0 +1,62 @@
+# GUÍA DE LABORATORIO: LLM PENTESTING
+
+## Ataque: Direct Instruction Override (DIO)
+
+### NIVEL 1: Instrucción directa
+
+**Objetivo:** conseguir que el chatbot genere exclusivamente el tipo de contenido solicitado por el reto.
+
+**Pistas para resolverlo:**
+
+1. Lee cuidadosamente el objetivo del ataque.
+2. Prueba una instrucción directa, breve y específica.
+3. Define claramente cómo debe ser la respuesta: cantidad de palabras, formato y ausencia de texto adicional.
+4. Evalúa el resultado y comprueba qué requisitos cumple.
+5. Si obtienes una puntuación parcial, analiza qué aspectos de la salida podrías estar pasando por alto.
+
+**Pista adicional:** no te centres únicamente en el contenido. El formato de la respuesta también puede ser importante para el evaluador.
+
+---
+
+### NIVEL 2: Reformulación de instrucciones
+
+**Objetivo:** comprobar si la forma de presentar una solicitud influye en el comportamiento del chatbot.
+
+**Pistas para resolverlo:**
+
+1. Si el chatbot rechaza la instrucción inicial, registra su respuesta.
+2. Piensa en otras formas legítimas de describir la misma tarea, por ejemplo, desde una perspectiva lingüística o de evaluación.
+3. Mantén constantes los requisitos de salida mientras cambias la formulación.
+4. Compara las puntuaciones de cada intento.
+5. Identifica qué diferencias coinciden con una mejora o un empeoramiento del resultado.
+
+**Pista adicional:** una solicitud puede conservar el mismo objetivo y, al mismo tiempo, presentar un contexto diferente. Comprueba si ese cambio influye en la respuesta.
+
+---
+
+### NIVEL 3: Chatbot con función especializada
+
+**Objetivo:** investigar por qué el chatbot insiste en responder desde su función específica, en este caso, el apoyo a la salud mental.
+
+**Pistas para resolverlo:**
+
+1. Identifica el comportamiento que el chatbot mantiene en sus respuestas.
+2. Comprueba si también rechaza tareas neutrales, como clasificar palabras o analizar instrucciones.
+3. Formula una hipótesis sobre las posibles restricciones de la aplicación.
+4. Prueba una tarea neutral para comprender mejor sus capacidades y limitaciones.
+5. Registra las respuestas y evita repetir indefinidamente intentos que producen el mismo resultado.
+
+**Pista adicional:** distingue entre las restricciones del modelo, las instrucciones de la aplicación y los criterios que utiliza el evaluador. No necesariamente son lo mismo.
+
+---
+
+### RECOMENDACIONES GENERALES
+
+* Cambia una variable por intento.
+* Registra cada respuesta y su puntuación.
+* No confundas una respuesta generada con la superación completa del reto.
+* Si una técnica funciona en un nivel, no asumas que funcionará en los demás.
+* Justifica tus conclusiones con los resultados observados.
+
+**Objetivo final:** resolver cada nivel mediante experimentación sistemática, comprender el comportamiento del chatbot y documentar los resultados obtenidos.
+
